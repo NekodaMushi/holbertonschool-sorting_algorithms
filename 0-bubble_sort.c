@@ -18,14 +18,13 @@ void bubble_sort(int *array, size_t size)
 		return;
 	for (j = 0; j < size; j++)
 	{
-		for (i = 0; i < size; i++) // parcours tout le tableau
+		for (i = 0; i < size; i++)
 		{
 			if (array[i] > array[i + 1])
 			{
 				tmp = array[i + 1];
 				array[i + 1] = array[i];
 				array[i] = tmp;
-				// print tableau a faire
 				print_array(array, size);
 			}
 		}

@@ -17,7 +17,7 @@ void swap_array(int a, int b, int *array)
 	array[b] = tmp;
 }
 /**
- * insertion_sort_list - sort array with selection method
+ * selection_sort - sort array with selection method
  *
  * @array: array used
  * @size: size of array

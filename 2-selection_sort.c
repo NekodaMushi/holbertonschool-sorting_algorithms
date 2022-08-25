@@ -30,7 +30,10 @@ void selection_sort(int *array, size_t size)
 			if (array[pos_ini] < array[min_checker])
 				pos_ini = min_checker;
 		}
-		swap_array(pos_ini, index, array);
-		print_array(array, size);
+		if (index != pos_ini)
+		{
+			swap_array(pos_ini, index, array);
+			print_array(array, size);
+		}
 	}
 }

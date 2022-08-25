@@ -31,7 +31,13 @@ void swap(listint_t *a, listint_t *b, listint_t **list)
 	else
 		a->next = NULL;
 }
-
+/**
+ * insertion_sort_list - sort list with insertion method
+ *
+ * @array: list
+ *
+ * Return: Nothing
+ */
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *cursor = NULL;

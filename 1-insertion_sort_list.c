@@ -42,6 +42,8 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *cursor = NULL;
 
+	if (!list || !*list)
+		return;
 	cursor = (*list)->next;
 
 	while (cursor)

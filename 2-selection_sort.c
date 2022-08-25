@@ -4,7 +4,7 @@
  *
  * @a: Left node getting swapped right
  * @b: Right node getting swapped left
- * @list: double linked list
+ * @array: double linked list
  *
  * Return: Nothing
  */
@@ -16,7 +16,14 @@ void swap_array(int a, int b, int *array)
 	array[a] = array[b];
 	array[b] = tmp;
 }
-
+/**
+ * insertion_sort_list - sort array with selection method
+ *
+ * @array: array used
+ * @size: size of array
+ *
+ * Return: Nothing
+ */
 void selection_sort(int *array, size_t size)
 {
 	unsigned int index, min_checker, pos_ini;

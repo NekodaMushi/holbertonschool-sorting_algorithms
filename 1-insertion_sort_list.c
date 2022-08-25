@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * insertion_sort_list - Fct sorting array of integer
+ * swap - Fct swapping 2 nodes
  *
  * @a: Left node getting swapped right
  * @b: Right node getting swapped left
@@ -34,7 +34,7 @@ void swap(listint_t *a, listint_t *b, listint_t **list)
 /**
  * insertion_sort_list - sort list with insertion method
  *
- * @array: list
+ * @list: list
  *
  * Return: Nothing
  */

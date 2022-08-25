@@ -26,7 +26,7 @@ void selection_sort(int *array, size_t size)
 		pos_ini = index;
 		for (min_checker = index + 1; min_checker < size; min_checker++)
 		{
-			if (array[pos_ini] < array[min_checker])
+			if (array[pos_ini] > array[min_checker])
 				pos_ini = min_checker;
 		}
 		if (index != pos_ini)

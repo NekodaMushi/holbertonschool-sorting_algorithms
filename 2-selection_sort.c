@@ -1,5 +1,13 @@
 #include "sort.h"
-
+/**
+ * swap_array - Fct swapping 2 nodes
+ *
+ * @a: Left node getting swapped right
+ * @b: Right node getting swapped left
+ * @list: double linked list
+ *
+ * Return: Nothing
+ */
 void swap_array(int a, int b, int *array)
 {
 	int tmp;

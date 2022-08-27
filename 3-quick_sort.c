@@ -20,7 +20,7 @@ void quick_swap_array(int *a, int *b)
 /**
  * partition - Fct swapping 2 nodes
  *
- * @array: Left node getting swapped right
+ * @a: Left node getting swapped right
  * @low: Right node getting swapped left
  * @high: double linked list
  *
@@ -29,6 +29,7 @@ void quick_swap_array(int *a, int *b)
 int partition(int *a, int low, int high, size_t size)
 {
 	int bot, top, pivot;
+
 	pivot = a[high];
 	top = low;
 
@@ -55,7 +56,7 @@ int partition(int *a, int low, int high, size_t size)
 /**
  * custom_quick_sort - Fct swapping 2 nodes
  *
- * @a: Left node getting swapped right
+ * @array: Left node getting swapped right
  * @low: Right node getting swapped left
  * @high: double linked list
  *
@@ -67,6 +68,7 @@ void custom_quick_sort(int *array, int low, int high, size_t size)
 	if (low < high)
 	{
 		int loc = partition(array, low, high, size);
+
 		custom_quick_sort(array, low, loc - 1, size);
 		custom_quick_sort(array, loc + 1, high, size);
 	}

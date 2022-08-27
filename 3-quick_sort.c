@@ -23,7 +23,7 @@ void quick_swap_array(int *a, int *b)
  * @a: Left node getting swapped right
  * @low: Right node getting swapped left
  * @high: double linked list
- *
+ * @size: number of elements in array
  * Return: (end) if succeeded
  */
 int partition(int *a, int low, int high, size_t size)
@@ -59,6 +59,7 @@ int partition(int *a, int low, int high, size_t size)
  * @array: Left node getting swapped right
  * @low: Right node getting swapped left
  * @high: double linked list
+ * @size: number of elements in array
  *
  * Return: (end) if succeeded
  */
@@ -78,7 +79,7 @@ void custom_quick_sort(int *array, int low, int high, size_t size)
  * quick_sort - fct calling custom quick_sort
  *
  * @array: list to be sorted
- * @size: size of the array
+ * @size: number of elements in array
  *
  * Return: Nothing
  */

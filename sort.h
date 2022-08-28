@@ -28,4 +28,8 @@ void selection_sort(int *array, size_t size);
 void swap_array(int a, int b, int *array);
 void quick_swap_array(int *a, int *b);
 void quick_sort(int *array, size_t size);
+
+/**Advanced*/
+void shell_sort(int *array, size_t size);
+
 #endif

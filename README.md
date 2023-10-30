@@ -1,120 +1,98 @@
-Background Context
-This project is meant to be done by groups of two students. Each group of two should pair program for at least the mandatory part.
+# Sorting Algorithms Project
 
-Resources
-Read or watch:
+![sorting](https://github.com/NekodaMushi/holbertonschool-sorting_algorithms/assets/98282927/02838659-a0fb-40ef-8931-c3e86fa62d46)
 
-Sorting algorithm
-Big O notation
-Sorting algorithms animations
-15 sorting algorithms in 6 minutes (WARNING: The following video can trigger seizure/epilepsy. It is not required for the project, as it is only a funny visualization of different sorting algorithms)
-Learning Objectives
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
-General
-At least four different sorting algorithms
-What is the Big O notation, and how to evaluate the time complexity of an algorithm
-How to select the best sorting algorithm for a given input
-What is a stable sorting algorithm
-Requirements
-General
-Allowed editors: vi, vim, emacs
-All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
-All your files should end with a new line
-A README.md file, at the root of the folder of the project, is mandatory
-Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
-You are not allowed to use global variables
-No more than 5 functions per file
-Unless specified otherwise, you are not allowed to use the standard library. Any use of functions like printf, puts, … is totally forbidden.
-In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
-The prototypes of all your functions should be included in your header file called sort.h
-Don’t forget to push your header file
-All your header files should be include guarded
-A list/array does not need to be sorted if its size is less than 2.
-GitHub
-There should be one project repository per group. If you clone/fork/whatever a project repository with the same name before the second deadline, you risk a 0% score.
 
-More Info
-Data Structure and Functions
-For this project you are given the following print_array, and print_list functions:
-#include <stdlib.h>
-#include <stdio.h>
 
-/\*\*
+## Background Context
 
-- print_array - Prints an array of integers
--
-- @array: The array to be printed
-- @size: Number of elements in @array
-  */
-  void print_array(const int *array, size_t size)
-  {
-  size_t i;
+This project is designed for educational purposes to understand different sorting algorithms and their efficiencies. The project is intended to be completed in pairs, and it is encouraged to use pair programming for at least the mandatory parts.
 
-      i = 0;
-      while (array && i < size)
-      {
-          if (i > 0)
-              printf(", ");
-          printf("%d", array[i]);
-          ++i;
-      }
-      printf("\n");
+## Resources
 
-  }
-  #include <stdio.h>
-  #include "sort.h"
+- Sorting algorithm
+- Big O notation
+- Sorting algorithms animations
+- [15 sorting algorithms in 6 minutes](https://www.youtube.com/watch?v=kPRA0W1kECg) (Warning: This video can trigger seizures/epilepsy; it's optional.)
 
-/\*\*
+## Learning Objectives
 
-- print_list - Prints a list of integers
--
-- @list: The list to be printed
-  */
-  void print_list(const listint_t *list)
-  {
-  int i;
+At the end of this project, you should be able to:
 
-      i = 0;
-      while (list)
-      {
-          if (i > 0)
-              printf(", ");
-          printf("%d", list->n);
-          ++i;
-          list = list->next;
-      }
-      printf("\n");
+- Understand at least four different sorting algorithms.
+- Know what Big O notation is and how to evaluate the time complexity of an algorithm.
+- Understand how to select the best sorting algorithm for a given input.
+- Know what a stable sorting algorithm is.
 
-  }
-  Our files print_array.c and print_list.c (containing the print_array and print_list functions) will be compiled with your functions during the correction.
-  Please declare the prototype of the functions print_array and print_list in your sort.h header file
-  Please use the following data structure for doubly linked list:
-  /\*\*
+## Requirements
 
-- struct listint_s - Doubly linked list node
--
-- @n: Integer stored in the node
-- @prev: Pointer to the previous element of the list
-- @next: Pointer to the next element of the list
-  */
-  typedef struct listint_s
-  {
-  const int n;
-  struct listint_s *prev;
-  struct listint_s \*next;
-  } listint_t;
-  Please, note this format is used for Quiz and Task questions.
+### General
 
-O(1)
-O(n)
-O(n!)
-n square -> O(n^2)
-log(n) -> O(log(n))
-n \* log(n) -> O(nlog(n))
-n + k -> O(n+k)
-…
-Please use the “short” notation (don’t use constants). Example: O(nk) or O(wn) should be written O(n). If an answer is required within a file, all your answers files must have a newline at the end.
+- Allowed editors: `vi`, `vim`, `emacs`.
+- All files will be compiled on Ubuntu 20.04 LTS using `gcc`, with the options `-Wall -Werror -Wextra -pedantic -std=gnu89`.
+- All files should end with a newline.
+- Code should be written in Betty style.
+- No more than 5 functions per file.
+- No usage of `printf`, `puts`, and other standard library functions.
+- Include all function prototypes in a header file `sort.h`.
+- No global variables.
 
-Tests
-Here is a quick tip to help you test your sorting algorithms with big sets of random integers: Random.org
+### Data Structures and Functions
+
+For this project, the following `print_array` and `print_list` functions are provided:
+
+#### `print_array`
+
+This function prints an array of integers.
+
+```c
+void print_array(const int *array, size_t size);
+```
+
+#### `print_list`
+
+This function prints a list of integers.
+
+```c
+void print_list(const listint_t *list);
+```
+
+### GitHub
+
+One repository per group. Cloning/forking a project repository with the same name before the second deadline risks a 0% score.
+
+## More Info
+
+### Big O Notation
+
+Please use the "short" notation. For example:
+
+- O(1)
+- O(n)
+- O(n!)
+- O(n^2)
+- O(log(n))
+- O(nlog(n))
+- O(n+k)
+
+### Tests
+
+For testing the sorting algorithms, you can use big sets of random integers from [Random.org](https://www.random.org/).
+
+## File Descriptions
+
+- `bubble_sort.c`: Bubble sort algorithm
+- `main.c`: Main files for testing
+- `insertion_sort_list.c`: Insertion sort algorithm
+- `shell_sort.c`: Shell sort algorithm
+- `selection_sort.c`: Selection sort algorithm
+- `quick_sort.c`: Quick sort algorithm
+- `README.md`: This README file
+- `print_array.c`: Function to print an array
+- `print_list.c`: Function to print a linked list
+- `sort.h`: Header file containing all function prototypes and data structures
+
+---
+
+For any issues or questions, feel free to contact me.
